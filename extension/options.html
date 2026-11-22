@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>AgentPEC — impostazioni</title>
+  <style>
+    :root { color-scheme: light dark; --bordo: #8884; --accento: #1a5fb4; }
+    body { font: 15px/1.5 system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.4rem; margin-bottom: .2rem; }
+    .avviso { border-left: 4px solid #c64600; padding: .6rem .9rem; background: #c6460014; margin: 1rem 0; }
+    fieldset { border: 1px solid var(--bordo); border-radius: 8px; margin: 1rem 0; padding: .6rem 1rem 1rem; }
+    legend { font-weight: 600; padding: 0 .3rem; }
+    .account { margin: .8rem 0; }
+    .account > label { font-weight: 600; }
+    .cartelle { margin: .3rem 0 0 1.6rem; }
+    .cartelle label { display: block; }
+    .cartelle input:disabled + span { opacity: .45; }
+    .uso { font-size: .8em; opacity: .7; margin-left: .3rem; }
+    .nota { font-size: .9em; opacity: .8; }
+    button { font: inherit; padding: .45rem 1.1rem; border-radius: 6px; border: 1px solid var(--accento); background: var(--accento); color: #fff; cursor: pointer; }
+    #esito { margin-left: .8rem; }
+  </style>
+</head>
+<body>
+  <h1>AgentPEC</h1>
+  <div class="nota">Versione sperimentale. Provala solo su una casella di prova.</div>
+
+  <div class="avviso">
+    L'agente vede <strong>solo</strong> le cartelle spuntate qui sotto, e solo negli account spuntati.
+    Non può inviare, inoltrare, cancellare o spostare messaggi. Tutto il resto, per lui, non esiste.
+  </div>
+
+  <fieldset>
+    <legend>Account e cartelle consentiti</legend>
+    <div id="elenco">Caricamento…</div>
+    <p class="nota">Le sottocartelle non sono incluse automaticamente: spunta ciascuna cartella.
+      Per collegare le ricevute al messaggio originale, autorizza anche la cartella della posta inviata.</p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Protezione dei dati</legend>
+    <label><input type="checkbox" id="pseudonimizza">
+      Pseudonimizza codici fiscali, partite IVA, IBAN, telefoni ed email nel testo e nell'oggetto</label>
+    <p class="nota">I dati sono sostituiti da segnaposto come [CF_1] prima di arrivare all'agente.
+      Nomi e indirizzi postali restano visibili: non è un'anonimizzazione.</p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Limite di sicurezza</legend>
+    <label>Al massimo <input type="number" id="limiteOrario" min="0" max="10000" style="width:5.5em"> messaggi aperti dall'agente in un'ora</label>
+    <p class="nota">Oltre il limite l'agente riceve un rifiuto finché non passa l'ora. 0 = nessun limite.
+      Il pulsante AgentPEC nella barra di Thunderbird mostra quanti messaggi ha aperto oggi e permette di sospenderlo.</p>
+  </fieldset>
+
+  <fieldset>
+    <legend>Bozze</legend>
+    <label><input type="checkbox" id="consentiBozze">
+      Consenti all'agente di aprire una finestra di nuovo messaggio già compilata</label>
+    <p class="nota">Il messaggio non viene mai inviato: la finestra si apre e decidi tu.</p>
+  </fieldset>
+
+  <button id="salva">Salva</button><span id="esito" role="status"></span>
+
+  <script src="comune.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

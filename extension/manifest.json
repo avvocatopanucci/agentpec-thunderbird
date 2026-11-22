@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "AgentPEC",
+  "version": "0.2.0",
+  "description": "Collega Thunderbird a un agente IA in sola lettura, solo sulle cartelle che autorizzi. Sperimentale.",
+  "author": "Giovanna Panucci",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "agentpec@agentpec.invalid",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": [
+    "accountsRead",
+    "messagesRead",
+    "storage",
+    "nativeMessaging",
+    "compose"
+  ],
+  "background": {
+    "scripts": ["comune.js", "spia.js", "background.js"]
+  },
+  "action": {
+    "default_title": "AgentPEC",
+    "default_label": "AgentPEC",
+    "default_icon": "icons/agentpec.svg",
+    "default_popup": "popup.html",
+    "allowed_spaces": []
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "64": "icons/agentpec.svg"
+  }
+}

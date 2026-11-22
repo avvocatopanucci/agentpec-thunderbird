@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>AgentPEC</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 14px/1.45 system-ui, sans-serif; width: 300px; margin: 0; padding: 14px 16px; }
+    h1 { font-size: 15px; margin: 0 0 8px; display: flex; align-items: center; gap: 8px; }
+    .pallino { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .attivo { background: #2ec27e; } .sospeso { background: #c01c28; } .scollegato { background: #9a9996; }
+    dl { display: grid; grid-template-columns: 1fr auto; gap: 3px 12px; margin: 10px 0 14px; }
+    dt { opacity: .8; } dd { margin: 0; font-weight: 600; text-align: right; }
+    button { width: 100%; font: inherit; font-weight: 600; padding: 8px; border-radius: 6px; border: 0; cursor: pointer; color: #fff; }
+    #interruttore.sospendi { background: #c01c28; } #interruttore.riprendi { background: #1a5fb4; }
+    p.nota { font-size: 12px; opacity: .75; margin: 10px 0 0; }
+  </style>
+</head>
+<body>
+  <h1><span id="pallino" class="pallino"></span><span id="stato">AgentPEC</span></h1>
+  <dl>
+    <dt>Messaggi aperti oggi</dt><dd id="aperti">0</dd>
+    <dt>Richieste dell'agente oggi</dt><dd id="operazioni">0</dd>
+    <dt>Richieste rifiutate oggi</dt><dd id="rifiutate">0</dd>
+    <dt>Ultimo accesso</dt><dd id="ultimo">mai</dd>
+    <dt>Aperti nell'ultima ora</dt><dd id="ora">0</dd>
+  </dl>
+  <button id="interruttore"></button>
+  <p class="nota">Sospeso, l'agente non può leggere nulla né aprire bozze. I contatori registrano solo numeri e orari, mai il contenuto. Cartelle e limite orario si scelgono nelle impostazioni dell'estensione.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

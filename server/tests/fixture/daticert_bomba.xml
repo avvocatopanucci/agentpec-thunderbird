@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE postacert [
+  <!ENTITY a "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa">
+  <!ENTITY b "&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;">
+  <!ENTITY c "&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;">
+]>
+<postacert tipo="accettazione" errore="nessuno"><intestazione><oggetto>&c;</oggetto></intestazione><dati/></postacert>

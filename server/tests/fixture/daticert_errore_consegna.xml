@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<postacert tipo="errore-consegna" errore="no-dest">
+  <intestazione>
+    <mittente>studio.prova@pec.example.it</mittente>
+    <destinatari tipo="certificato">inesistente@pec.example.it</destinatari>
+    <risposte>studio.prova@pec.example.it</risposte>
+    <oggetto>Comunicazione di prova</oggetto>
+  </intestazione>
+  <dati>
+    <gestore-emittente>GESTORE DI PROVA S.P.A.</gestore-emittente>
+    <data zona="+0200">
+      <giorno>15/07/2026</giorno>
+      <ora>18:02:00</ora>
+    </data>
+    <identificativo>opec002.20260715180200.00002.02.1.1@pec.example.it</identificativo>
+    <msgid>&lt;originale-prova-002@studio.example.it&gt;</msgid>
+    <consegna>inesistente@pec.example.it</consegna>
+    <errore-esteso>5.1.1 - Utente non esistente</errore-esteso>
+  </dati>
+</postacert>

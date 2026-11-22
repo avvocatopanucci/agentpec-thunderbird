@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE postacert SYSTEM "Postacert.dtd">
+<postacert tipo="avvenuta-consegna" errore="nessuno">
+  <intestazione>
+    <mittente>studio.prova@pec.example.it</mittente>
+    <destinatari tipo="certificato">controparte.prova@pec.example.it</destinatari>
+    <risposte>studio.prova@pec.example.it</risposte>
+    <oggetto>Diffida e messa in mora - pratica di prova 1/2026</oggetto>
+  </intestazione>
+  <dati>
+    <gestore-emittente>ALTRO GESTORE DI PROVA S.R.L.</gestore-emittente>
+    <data zona="+0100">
+      <giorno>20/11/2026</giorno>
+      <ora>09:41:15</ora>
+    </data>
+    <identificativo>opec001.20261120094112.00001.01.1.1@pec.example.it</identificativo>
+    <msgid>&lt;originale-prova-001@studio.example.it&gt;</msgid>
+    <ricevuta tipo="completa" />
+    <consegna>controparte.prova@pec.example.it</consegna>
+  </dati>
+</postacert>
